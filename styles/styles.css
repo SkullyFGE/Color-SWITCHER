@@ -1,0 +1,66 @@
+:root {
+    /* Colors */
+    --primary-text-color: #363434;
+
+    --primary-background-color: #e7e4e4;
+}
+
+/* Remove default page margins so header/nav can span edge-to-edge */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    opacity: 1;
+}
+
+header {
+    position: static;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    padding: 0px;
+    text-align: center;
+    background-color: #1abc9c;
+    display: block;
+    box-sizing: border-box;
+}
+
+footer {
+    position: fixed;
+    display: inline-block;
+    bottom: 0;
+    text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
+
+main {
+    box-sizing: border-box;
+    padding: 20px;
+}
