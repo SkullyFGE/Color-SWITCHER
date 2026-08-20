@@ -46,3 +46,35 @@ individualBtn.forEach(element => {
     });
   }
 });
+
+const hexColorButton = document.getElementById("btn-hex");
+
+fetch("https://www.csscolorsapi.com/api/colors/dodgerblue")
+  .then(response => {
+
+    if(!response.ok){
+      throw new Error("Could not fetch any information!")
+    }
+    return response.json();
+  })
+  .then(data => console.log(data.data.name))
+  .catch(error => console.error(error));
+
+  fetchData();
+  async function fetchData() {
+    
+    try{
+      const response = await fetch("https://www.csscolorsapi.com/api/colors/dodgerblue");
+
+      if(!response.ok){
+        throw new Error("Could not fetch data!");
+      }
+
+      const data = await response.json();
+      console.log(data);
+
+    }catch(error){
+      console.error(error);
+    }
+
+  }
